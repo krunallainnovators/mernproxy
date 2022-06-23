@@ -6,7 +6,7 @@ function App() {
   const [pingResponse, setPingResponse] = useState("");
 
   const pingBackend = () => {
-    fetch("/api/ping", {
+    fetch("/v1/api.json?rss_url=https://medium.com/feed/@kanani-nirav", {
       method: "GET"
     })
       .then((response) =>
