@@ -18,7 +18,8 @@ module.exports = {
     proxy: {
       "/api": {
         target: "http://localhost:3000",
-        router: () => `http://localhost:${process.env.PORT || 4000}`,
+        // router: () => `http://localhost:${process.env.PORT || 4000}`,
+        router: () => `https://api.rss2json.com`,
         logLevel: "debug" /*optional*/
       }
     }

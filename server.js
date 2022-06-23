@@ -9,8 +9,11 @@ app.use(express.static(DIST_DIR));
 app.get("/", (req, res) => {
   res.sendFile(HTML_FILE);
 });
-app.get("/api/ping", (req, res) => {
-  res.send("pong");
-});
+app.get(
+  "/v1/api.json?rss_url=https://medium.com/feed/@kanani-nirav",
+  (req, res) => {
+    res.send("pong");
+  }
+);
 
 app.listen(port);
