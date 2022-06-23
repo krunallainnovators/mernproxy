@@ -17,8 +17,8 @@ module.exports = {
     open: true,
     proxy: {
       "/api": {
-        target: "http://localhost",
-        router: () => "https://demo-proxy-webpack.herokuapp.com",
+        target: "http://localhost:3000",
+        router: () => `http://localhost:${process.env.PORT || 4000}`,
         logLevel: "debug" /*optional*/
       }
     }
