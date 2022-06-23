@@ -9,11 +9,7 @@ function App() {
     fetch("/v1/api.json?rss_url=https://medium.com/feed/@kanani-nirav", {
       method: "GET"
     })
-      .then((response) =>
-        response.text().then(function (text) {
-          setPingResponse(text);
-        })
-      )
+      .then((response) => console.log(response.json()))
       .catch((err) => console.log(err));
   };
 
